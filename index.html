@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Toko Kopi Sensa</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Minuman Kopi Dengan Cita Rasa Yang Khas dan Berkualitas">
+
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',Arial,sans-serif}
+body{background:#f7faf8;color:#2c3e50}
+
+/* HEADER */
+header{
+  background: radial-gradient(circle, #ff8c00, #e65100);
+  padding: 28px 20px;
+  text-align: center;
+  color: #fff;
+}
+header h1{font-size:34px;font-weight:700}
+header p{opacity:.95;margin-top:6px}
+
+/* HERO */
+.hero{
+  max-width:1200px;
+  margin:auto;
+  padding:60px 20px;
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+  gap:40px;
+  align-items:center;
+}
+.hero h2{font-size:36px;margin-bottom:14px}
+.hero p{font-size:17px;line-height:1.7}
+.hero img{
+  width:100%;
+  border-radius:22px;
+  box-shadow:0 15px 35px rgba(0,0,0,.15)
+}
+
+/* BUTTON */
+.btn{
+  display:inline-block;
+  margin-top:22px;
+  padding:16px 34px;
+  background:#ff8c00;
+  color:#fff;
+  text-decoration:none;
+  font-weight:600;
+  border-radius:40px;
+  transition:.3s;
+}
+.btn:hover{background:#e65100}
+
+/* SECTION */
+.section{
+  max-width:1200px;
+  margin:auto;
+  padding:20px;
+}
+.section-title{
+  text-align:center;
+  font-size:30px;
+  font-weight:700;
+  margin:60px 0 30px;
+}
+
+/* PRODUCTS */
+.products{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+  gap:26px;
+}
+.card{
+  background:#fff;
+  border-radius:20px;
+  padding:18px;
+  text-align:center;
+  box-shadow:0 10px 25px rgba(0,0,0,.08);
+  transition:0.4s;
+  border: 2px solid transparent;
+}
+.card:hover{transform:translateY(-10px); background: radial-gradient(circle, #ffcc00, #ff8c00); border: 2px solid #e65100; box-shadow: 0 15px 35px rgba(230, 81, 0, 0.3);}
+.card img{
+  width:100%;
+  height:170px;
+  object-fit:cover;
+  border-radius:14px;
+}
+.card h3{margin:14px 0 6px;font-size:18px}
+.price{color:#16a34a;font-weight:700}
+.card:hover h3, 
+.card:hover .price {
+  color: #fff;
+}
+
+/* CTA */
+.cta{
+  background: radial-gradient(circle, #ff8c00, #e65100);
+  margin:80px 20px;
+  padding:50px 30px;
+  text-align:center;
+  color:#fff;
+  border-radius:30px;
+}
+.cta h2{font-size:32px;margin-bottom:12px}
+.cta p{font-size:17px;opacity:.95}
+
+/* FOOTER */
+footer{
+  background:#1d2229;
+  color:#fff;
+  text-align:center;
+  padding:12px;
+  font-size:12px;
+}
+</style>
+</head>
+<body>
+<header>
+  <h1>Toko Kopi Sensa</h1>
+  <p>Aroma Khas • Rasa Terjamin • Biji Pilihan</p>
+</header>
+
+<section class="hero">
+  <div>
+    <h2>Kopi Berkualitas</h2>
+    <p>
+      Dipetik manual dari tanah pilihan untuk menjamin kematangan sempurna di setiap butirnya. Kami menjaga kemurnian proses demi mengunci aroma asli kopi hingga ke cangkir Anda.
+    </p>
+    <a href="#products" class="btn">PESAN SEKARANG</a>
+  </div>
+
+  <img src="https://i.ibb.co/v6gys7NN/Ilustrasi-Biji-Kopi-Sensa-Berkualitas.jpg">
+</section>
+
+<section class="section" id="products">
+  <h2 class="section-title">Produk Unggulan</h2>
+
+  <div class="products">
+    <div class="card">
+      <img src="https://i.ibb.co/ZRs7Mxpr/Espresso.jpg">
+      <h3>Espresso</h3>
+      <div class="price">Rp 20.000</div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ibb.co/SY2yRp3/Iced-Caramel-Macchiato.jpg">
+      <h3>Iced Caramel Macchiato</h3>
+      <div class="price">Rp 30 .000</div>
+    </div>
+
+    <div class="card">
+      <img src="https://i.ibb.co/PZnxCWVb/Iced-Latte.jpg">
+      <h3>Iced Latte</h3>
+      <div class="price">Rp 25.000</div>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <h2>Kenapa Pilih Toko Kopi Sensa?</h2>
+  <p>Kami selalu mengejar kepuasan anda, karena kepuasan anda adalah kepuasan kami.</p>
+</section>
+
+<footer>
+  © 2025 Kopi Sensa • All Rights Reserved
+</footer>
+
+</body>
+</html>
